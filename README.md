@@ -24,6 +24,7 @@ ssh 키 생성 및 KNU-DLILab-server 로컬 연결, 비밀번호 변경 완료
 테스트 스크립트 작성  
 8000 포트 에러  
 63700 포트에 Qwen/Qwen2.5-3B 모델 서빙 중인 것 확인  
+scripts 작성하여 request 시 completion 오는 것 확인  
   
 
 ## 실행 방법
