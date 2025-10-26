@@ -2,3 +2,4 @@ qwen2_env/
 src/__pycache__/__init__.cpython-310.pyc
 src/api_clients/__pycache__/
 .python-version
+src/utils/__pycache__/mmlu_utils.cpython-310.pyc
