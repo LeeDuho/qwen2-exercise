@@ -33,6 +33,18 @@ mmlu 데이터셋에 대해 학습
 - 2025-10-26  
 mmlu 데이터셋 로딩하고 mmlu 포맷에 맞게 question prompt 작성을 위한 MMLUUtils 유틸 생성 v1  
 MMLUUtils, Qwen2Client 통하여 mmlu 데이터셋, qwen2 모델 활용한 answer과 정답 answer 비교 (mmlu_utils_test 테스트 코드)  
+모델 호환성 위해 Qwen2Client
+기존의 프롬프트로 답변이 숫자만 제대로 나오지 않아서 
+또한 qwen2 모델 client 또한 api 문서 참고하여 OpenAI 사용하도록 변경  
+
+- 2025-10-29
+https://github.com/EleutherAI/lm-evaluation-harness 참고하여 프롬프트 생성
+mmlu 데이터셋의 dev_set 사용하여 fewshot으로 사용할수 있도록 변경, 프롬프트에 적용
+정답 추출, 평가 메서드 작성하여 mmlu "all" 데이터셋에 대해서 정확도 평가
+mmlu 데이터셋 추출(Qwen/Qwen2.5-3B-Instruct 모델)
+Accuracy: 0.6418 (64.18%)
+Valid predictions: 14042/14042
+
 
 
 ## 실행 방법

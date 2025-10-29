@@ -1,18 +1,26 @@
 import requests
+import json
 
-class Qwen2Client:
-    def __init__():
-        pass
+class VllmClient:
+    def __init__(self, api_key:str = "" , base_url:str = "http://localhost:8000/v1", model="Qwen/Qwen2.5-3B-Instruct"):
+        self.api_key = api_key
+        self.base_url = base_url
+        self.model = model
     
     def generate_completion(
-            prompt: str
+            self,
+            prompt:str,
+            max_tokens=10, 
+            temperature=0.0
     ) -> str:
-
-        url = "http://localhost:63700/v1/completions"
+        
+        url = self.base_url + "/completions"
         
         payload = {
-            "model": "Qwen/Qwen2.5-3B",
+            "model": self.model,
             "prompt": prompt,
+            "max_tokens": max_tokens,
+            "temperature": temperature
         }
         
         headers = {
@@ -21,9 +29,7 @@ class Qwen2Client:
     
         res = requests.post(url, json=payload, headers=headers)
         
-        # print(f"res: {res.json()}")
         data = res.json()
-        
+        print(data)
         ret = data["choices"][0]["text"]
         return ret
-        
