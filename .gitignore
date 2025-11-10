@@ -3,3 +3,5 @@ src/__pycache__/__init__.cpython-310.pyc
 src/api_clients/__pycache__/
 .python-version
 src/utils/__pycache__/mmlu_utils.cpython-310.pyc
+src/evaluators/__pycache__/evaluator.cpython-310.pyc
+src/utils/__pycache__/dataset_utils.cpython-310.pyc
